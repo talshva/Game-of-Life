@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Game of Life</title>
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <h1>Game of Life</h1>
+        <div>
+            <button class="button" onclick="playGen()">Start</button>
+            <button class="button" onclick="stopGen()">Stop</button>
+            <button class="button" onclick="init() , stopGen()">Clear</button>
+            
+            <span>🐢</span>
+            <input id="slider" type="range" min="0" max="500" step="100" value="100"
+             title="speed dial" onclick = "stopGen() , playGen()" onkeydown="stopGen() , playGen()">
+            <span>🐇 </span>
+            
+        </div>
+
+        <table id="center">
+            <tbody class="board">
+            </tbody>
+        </table>
+
+
+    </div>
+    <script src="main.js"></script>   
+</body>
+
+</html>
